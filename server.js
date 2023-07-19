@@ -8,6 +8,13 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + "/index.html")
 })
 
+app.get('/home', (req, res) => {
+  res.sendFile("This is a home page")
+})
+
+app.get('/about', (req, res) => {
+  res.sendFile("This is an about page.")
+})
 
 app.post('/', function(req, res) {
     var mass = parseInt(req.body.mass);
